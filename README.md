@@ -1,14 +1,18 @@
 # strapi-plugin-wysiwyg-tui-editor
 
-**This is a strapi v4 plugin which does not support any earlier version**
+⚠️ **This is a strapi v4 plugin which does not support any earlier version!**
+
+![npm package](https://img.shields.io/npm/v/strapi-plugin-wysiwyg-tui-editor)
 
 A [strapi](https://strapi.io/) plugin to replace the default rich text editor with [ToastUI Editor](https://ui.toast.com/tui-editor)
 
 ## Features
 
-- Support the editing modes of both markdown and WYSIWYG.
-- Allow you to add images from the strapi's media library.
-- Switch between two preview layouts, either by tab or side-by-side.
+This plugin:
+
+- Supports the editing modes of both markdown and WYSIWYG.
+- Allows you to add images from the strapi's media library.
+- Can switch between two preview layouts, either by tab or side-by-side.
 - Can expand the editor to full screen for large writing area.
 
 ## Installation
