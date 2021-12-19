@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Override the rich text editor with ToastUI Editor.",
   "strapi": {
-    "name": "ToastUI Editor",
+    "name": "toast-ui-editor",
     "description": "Override the rich text editor with ToastUI Editor.",
     "kind": "plugin"
   },
