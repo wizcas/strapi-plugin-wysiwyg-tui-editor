@@ -1,0 +1,35 @@
+{
+  "name": "strapi-plugin-wysiwyg-tui-editor",
+  "version": "0.0.0",
+  "description": "Override the rich text editor with ToastUI Editor.",
+  "strapi": {
+    "name": "ToastUI Editor",
+    "description": "Override the rich text editor with ToastUI Editor.",
+    "kind": "plugin"
+  },
+  "dependencies": {
+    "@toast-ui/react-editor": "^2.5.4",
+    "react-use": "^17.3.1",
+    "styled-components": "^5.3.3"
+  },
+  "author": {
+    "name": "Wizcas Chen",
+    "email": "chen@0x1c.dev",
+    "url": "https://github.com/wizcas"
+  },
+  "maintainers": [
+    {
+      "name": "Wizcas Chen",
+      "email": "chen@0x1c.dev",
+      "url": "https://github.com/wizcas"
+    }
+  ],
+  "engines": {
+    "node": ">=12.x. <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}
