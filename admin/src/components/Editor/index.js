@@ -45,6 +45,14 @@ export default function Editor({
       {required && <Required>*</Required>}
     </FieldLabel>
   );
+  const toolbar = (isFlyout) => (
+    <Toolbar
+      previewStyle={previewStyle}
+      onChangePreviewStyle={toggleStyle}
+      onAddMedia={() => toggleMediaLib(true)}
+      onExpand={!isFlyout && (() => toggleFlyout(true))}
+    />
+  );
   const editor = useMemo(
     () => (
       <TuiEditor
@@ -67,12 +75,7 @@ export default function Editor({
           {title}
           {labelAction}
         </Header>
-        <Toolbar
-          previewStyle={previewStyle}
-          onChangePreviewStyle={toggleStyle}
-          onAddMedia={() => toggleMediaLib(true)}
-          onExpand={() => toggleFlyout(true)}
-        />
+        {toolbar(false)}
       </HeaderLayout>
       {showFlyout ? (
         <FlyoutWrapper>
@@ -83,6 +86,7 @@ export default function Editor({
             header={title}
             style={FLYOUT_STYLE}
           >
+            {toolbar(true)}
             {editor}
           </Flyout>
         </FlyoutWrapper>

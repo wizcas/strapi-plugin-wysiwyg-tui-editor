@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { prefixFileUrlWithBackendUrl, useLibrary } from '@strapi/helper-plugin';
 
@@ -28,12 +28,6 @@ export default function MediaLib({ isOpen, onClose, editor }) {
   }
 
   return isOpen ? (
-    <ModalLayer>
-      <MediaLibDialog onClose={onClose} onSelectAssets={handleSelectAssets} />
-    </ModalLayer>
+    <MediaLibDialog onClose={onClose} onSelectAssets={handleSelectAssets} />
   ) : null;
 }
-
-const ModalLayer = styled.div`
-  z-index: 100;
-`;

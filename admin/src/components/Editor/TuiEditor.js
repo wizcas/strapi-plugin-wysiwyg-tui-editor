@@ -47,7 +47,4 @@ const EditorWrapper = styled.div`
     left: 0;
     right: 0;
   }
-  .CodeMirror-vscrollbar {
-    z-index: 3;
-  }
 `;
