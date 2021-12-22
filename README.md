@@ -2,7 +2,7 @@
 
 ⚠️ **This is a strapi v4 plugin which does not support any earlier version!**
 
-![npm package](https://img.shields.io/npm/v/strapi-plugin-wysiwyg-tui-editor)
+[![npm package](https://img.shields.io/npm/v/strapi-plugin-wysiwyg-tui-editor)](https://www.npmjs.com/package/strapi-plugin-wysiwyg-tui-editor)
 
 A [Strapi](https://strapi.io/) plugin to replace the default rich text editor with [ToastUI Editor](https://ui.toast.com/tui-editor)
 
