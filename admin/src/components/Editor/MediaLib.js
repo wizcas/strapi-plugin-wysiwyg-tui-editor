@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useEffect } from 'react';
 import { prefixFileUrlWithBackendUrl, useLibrary } from '@strapi/helper-plugin';
 
 export default function MediaLib({ isOpen, onClose, editor }) {
@@ -26,6 +25,32 @@ export default function MediaLib({ isOpen, onClose, editor }) {
     });
     onClose();
   }
+
+  // This is a hack to modify the media dialog's z-index
+  useEffect(() => {
+    if (!isOpen) return;
+    let timer;
+    async function waitForModal() {
+      return new Promise((r) => {
+        timer = setTimeout(() => {
+          const modalRoot = document
+            .getElementById('asset-dialog-title')
+            ?.closest('div[data-react-portal="true"]').firstChild;
+          if (modalRoot) {
+            r(modalRoot);
+          } else {
+            return waitForModal();
+          }
+        }, 10);
+      });
+    }
+    waitForModal().then((modalRoot) => {
+      modalRoot.style.zIndex = '10';
+    });
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isOpen]);
 
   return isOpen ? (
     <MediaLibDialog onClose={onClose} onSelectAssets={handleSelectAssets} />

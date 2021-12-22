@@ -17,18 +17,15 @@ export default function Flyout({
   name,
   style,
 }) {
+  const titleId = `${name}-flyout-title`;
   return isOpen ? (
-    <ModalLayout
-      onClose={onClose}
-      labelledBy={`${name}-flyout-title`}
-      style={style}
-    >
+    <ModalLayout onClose={onClose} labelledBy={titleId} style={style}>
       <ModalHeader>
         <Typography
           fontWeight="bold"
           textColor="neutral800"
           as="h2"
-          id="asset-dialog-title"
+          id={titleId}
         >
           {header}
         </Typography>
