@@ -44,5 +44,9 @@
   "bugs": {
     "url": "https://github.com/wizcas/strapi-plugin-wysiwyg-tui-editor/issues"
   },
-  "homepage": "https://github.com/wizcas/strapi-plugin-wysiwyg-tui-editor"
+  "homepage": "https://github.com/wizcas/strapi-plugin-wysiwyg-tui-editor",
+  "peerDependencies": {
+    "@strapi/helper-plugin": "^4.0.1",
+    "@strapi/strapi": "^4.0.1"
+  }
 }

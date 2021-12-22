@@ -1,4 +1,5 @@
 import React, { forwardRef, useEffect } from 'react';
+import styled from 'styled-components';
 import { Editor, Viewer } from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 
@@ -25,7 +26,7 @@ export default forwardRef(function TuiEditor(
   }
 
   return !disabled ? (
-    <div>
+    <EditorWrapper>
       <Editor
         ref={editorRef}
         usageStatistics={false}
@@ -35,8 +36,18 @@ export default forwardRef(function TuiEditor(
         onChange={handleDocChange}
         {...props}
       />
-    </div>
+    </EditorWrapper>
   ) : (
     <Viewer initialValue={value} />
   );
 });
+
+const EditorWrapper = styled.div`
+  .tui-md-code-block.CodeMirror-linebackground {
+    left: 0;
+    right: 0;
+  }
+  .CodeMirror-vscrollbar {
+    z-index: 3;
+  }
+`;
