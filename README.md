@@ -22,12 +22,16 @@ In the root of your strapi project, run:
 With yarn:
 ```shell
 yarn add strapi-plugin-wysiwyg-tui-editor
+yarn build
 ``` 
 
 Or with npm:
 ```shell
 npm install --save strapi-plugin-wysiwyg-tui-editor
+npm run build
 ```
+
+In the strapi UI on your local app reload with the "empty cache and hard reload" option.
 
 ## Screenshots
 
